@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Ensure script.js is linked -->
+</head>
+<body>
+    <header>
+        <img src="Images/project logo.jpg" alt="">
+        <div class="navig">
+               <a href=""> Home  </a> 
+               <a href=""> Products  </a> 
+               <a href=""> About Us  </a> 
+               <a href=""> Contact Us</a> 
+               <a href="">  Log in</a> 
+               <a href="add-to-cart.html"> Cart </a> 
+        </div>
+        <div class="hamburger" onclick="toggleMenue()">
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>   
+    </header>
+    <nav id="navMenu">
+        <div class="small-navig">
+                <a href=""> Home  </a> 
+                <a href=""> Products  </a> 
+                <a href=""> About Us  </a> 
+                <a href=""> Contact Us</a> 
+                <a href="">  Log in</a> 
+                <a href=""> Cart </a> 
+                <a href=""> Check Out </a>  
+        </div>
+    </nav>
+
+    <section class="con">
+        <div class="head-spacer">
+            <form>
+                <label for="gender">Select category:&nbsp;&nbsp;</label>
+                <select name="category" id="gender" onchange="menwomenpage()">
+                    <option value="Men">Men</option>
+                    <option value="Women">Women</option>
+                </select>
+            </form>
+        </div>
+        
+        
+        <div class="slider-wrapper">
+            <div class="slider">
+                <button id="next">Next</button>
+                <img src="img/fashion-5515135_1920.jpg" id="image-slider" alt="image">
+                <p id="textval">Vintage Combat Boots</p>
+                <button id="prev">Prev</button>
+            </div>
+            <div class="slider-nav">
+                <a></a>
+                <a></a>
+                <a></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="cards">
+        <div class="card">
+            <div class="img-con" id="first">
+            </div>
+            <p>4DFWD 4 - RUNNING SHOES</p>
+            <p>$180</p>
+            <button class="add-to-cart-btn" data-name="4DFWD 4 - RUNNING SHOES" data-price="180" data-image="img/4DFWD 4 RUNNING SHOES/1.avif">Add to cart</button>
+        </div>
+
+        <div class="card">
+            <div class="img-con" id="second">
+            </div>
+            <p>Kaptir 3.0 Shoes</p>
+            <p>$220</p>
+            <button class="add-to-cart-btn" data-name="Kaptir 3.0 Shoes" data-price="220" data-image="img/Kaptir 3.0 Shoes/1.avif">Add to cart</button>
+        </div>
+
+        <div class="card">
+            <div class="img-con" id="third">
+            </div>
+            <p>Ultraboost 5X Shoes</p>
+            <p>$320</p>
+            <button class="add-to-cart-btn" data-name="Ultraboost 5X Shoes" data-price="320" data-image="img/Ultraboost 5X Shoes/1.avif">Add to cart</button>
+        </div>
+    </div>
+
+    <section class="main">
+        <h2>What Our Clients Say About Us</h2>
+        <div class="cont">
+            <div class="review-card">
+                <img src="img/client/ibrahim.jpg" class="client-photo">
+                <h3>Ibrahim</h3>
+                <p>"I bought this from me and I'll buy another one for my kids"</p>
+            </div>
+            <div class="review-card">
+                <img src="img/client/mohammad.jpg"class="client-photo">
+                <h3>Mohammad</h3>
+                <p>"I ordered this for my wife and she loved it. I highly recommend it"</p>
+            </div>
+            <div class="review-card">
+                <img src="img/client/hadi.jpg" class="client-photo">
+                <h3>Hadi</h3>
+                <p>"I didn't like it so much"</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <img src="logo.png" alt="logo">
+        <div class="nav-desc">
+            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Header</a>
+        </div>
+        <p>&#169; CopyRight 2024</p>
+    </footer>
+
+</body>
+</html>
