@@ -474,7 +474,6 @@ button:hover {
 #total-container {
   position: fixed;
   right: 20px;
-  
   transform: translateY(-50%);
   background-color: #f8f8f8;
   padding: 20px;
@@ -501,6 +500,43 @@ button:hover {
   font-size: 18px;
   padding-left: 10px;
 }
+
+@media (max-width: 768px) {
+  #table thead {
+    display: none;
+  }
+  
+  #table tbody tr {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  #table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  #table td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #333;
+  }
+  
+
+  #total-container {
+    position: static;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  #total-table th, #total-table td {
+    font-size: 14px;
+  }
+}
+
 
 
 .main {
@@ -610,4 +646,39 @@ footer {
 #total-price {
   font-weight: bold;
   color: #333;
+}
+.form-btn{
+  background-color: rgb(59, 59, 120);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.form-btn:hover{
+  background-color: rgb(106, 106, 61);
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  gap: 30px;
+  padding: 30px;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s ease;
+
+}
+footer a:hover{
+background-color:rgb(106, 106, 61) ;
+}
+footer img{
+  width: 120px;
+  height: auto;
 }

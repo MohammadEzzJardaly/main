@@ -78,21 +78,21 @@ addtocart.forEach(button => {
         const productdetails = {
             imageSrc: button.getAttribute("data-image"),
             brand: "Adidas",
-            item: button.getAttribute("data-name"),
+            itemName: button.getAttribute("data-name"), // Renamed from "item" to "itemName"
             price: `$${button.getAttribute("data-price")}`,
             quantity: 1,
             total: `$${button.getAttribute("data-price")}`
         };
 
         let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-        let existingproduct = cartItems.find(item => item.item === productdetails.item);
+        let existingproduct = cartItems.find(item => item.itemName === productdetails.itemName); // Updated property name
 
         if (existingproduct) {
-            alert(`"${productdetails.item}" is already in the cart. You can change the quantity in the cart page.`);
+            alert(`"${productdetails.itemName}" is already in the cart. You can change the quantity in the cart page.`);
         } else {
             cartItems.push(productdetails);
             localStorage.setItem("cartItems", JSON.stringify(cartItems));
-            alert(`"${productdetails.item}" has been added to the cart.`);
+            alert(`"${productdetails.itemName}" has been added to the cart.`);
         }
     });
 });

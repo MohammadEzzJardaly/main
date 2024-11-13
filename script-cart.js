@@ -20,7 +20,7 @@ function saves(product) {
 function updatequantity(name, quantity, total) {
     let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     cartItems = cartItems.map(item => {
-        if (item.itemName === name) {
+        if (item.itemName === name) { // Using "itemName" consistently
             item.quantity = quantity;
             item.total = total;
         }
@@ -32,7 +32,7 @@ function updatequantity(name, quantity, total) {
 
 function removes(name) {
     let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    cartItems = cartItems.filter(item => item.itemName !== name);
+    cartItems = cartItems.filter(item => item.itemName !== name); // Using "itemName"
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     updateprice();
 }
